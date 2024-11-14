@@ -16,4 +16,8 @@ export class SidebarComponent {
   get historial() {
     return this.gifsService.historial;
   }
+
+  buscar(ultimaBusqueda: string) {
+    this.gifsService.buscarGifs(ultimaBusqueda);
+  }
 }

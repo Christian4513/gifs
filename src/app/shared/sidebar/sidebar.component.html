@@ -4,7 +4,8 @@
     <span class="fs-5 electric-blue-text">{{title}}</span>
   </a>
   <ul class="nav nav-pills flex-column mb-0 align-items-center align-items-sm-start w-100">
-    <li *ngFor="let ultimaBusqueda of historial" class="d-flex justify-content-center w-100 mt-1">
+    <li *ngFor="let ultimaBusqueda of historial" (click)="buscar(ultimaBusqueda)"
+      class="d-flex justify-content-center w-100 mt-1">
       <a class="btn btn-light px-4 text-center w-100 electric-blue-text">{{ultimaBusqueda | titlecase}}</a>
     </li>
   </ul>

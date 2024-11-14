@@ -10,12 +10,14 @@ import { GifsService } from '../services/gifs.service';
 })
 export class ResultsComponent {
 
+// Hace una copia del array gif para hacer el for en el html
   get resultados(){
     return this.gifsService.resultado;
   }
 
   constructor(private gifsService: GifsService){}
-  
+
+// copia el enlace en portapapeles
   copiarEnlace(url: string) {
     navigator.clipboard.writeText(url).then(() => {
       alert('¡Enlace copiado al portapapeles!');

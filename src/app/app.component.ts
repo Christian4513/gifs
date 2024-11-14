@@ -13,6 +13,5 @@ import { GifsModule } from "./gifs/gifs.module";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'gifsApp';
-  isCollapsed: boolean = true;
+
 }

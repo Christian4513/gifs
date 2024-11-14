@@ -15,5 +15,15 @@ export class ResultsComponent {
   }
 
   constructor(private gifsService: GifsService){}
+  
+  copiarEnlace(url: string) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('¡Enlace copiado al portapapeles!');
+    }).catch(err => {
+      console.error('Error al copiar el enlace: ', err);
+    });
+  }
 
 }
+
+

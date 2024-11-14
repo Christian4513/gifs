@@ -1,9 +1,15 @@
 <div class="row">
-  <div *ngFor="let gif of resultados" class="card col-md-4 col-sm-6" style="width: 18rem;">
-    <img [src]="gif.images.downsized_medium.url" class="card-img-top" [alt]="gif.alt_text">
-    <div class="card-body">
-      <h5 class="card-title">{{gif.title}}</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div *ngFor="let gif of resultados" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 d-flex">
+    <div class="card w-100 d-flex flex-column align-items-start p-0">
+      <img [src]="gif.images.downsized_medium.url" class="card-img-top" [alt]="gif.alt_text" style="max-height: 150px; object-fit: cover;">
+      <div class="card-body d-flex flex-column align-items-start p-2">
+        <h5 class="card-title">{{ gif.title }}</h5>
+        <a href="#" class="btn btn-primary btn-sm mt-auto" (click)="copiarEnlace(gif.embed_url)">Copiar</a>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+

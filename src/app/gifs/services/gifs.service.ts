@@ -34,13 +34,13 @@ export class GifsService {
   buscarGifs(query: string = '') {
     if (!this._historial.includes(query)) {
       this._historial.unshift(query);
-      this._historial = this._historial.splice(0, 10);
+      this._historial = this._historial.splice(0, 12);
       localStorage.setItem('historial', JSON.stringify(this._historial));
     }
 
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '10')
+      .set('limit', '12')
       .set('q', query);
 
     const observable = this.http.get<SearchGifsResponse>(
